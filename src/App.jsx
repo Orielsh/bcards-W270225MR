@@ -12,7 +12,8 @@ function App() {
     <MyContext.Provider value={{setIsLoader}}>
       <Header/>
       <Routes>
-        <Route path="/" element={<CardsGallery />} />
+        <Route path="/" element={< div/>} />
+        <Route path="/about" element={<div/>} />
       </Routes>
       {isLoader &&
         <div className="loaderFrame">
