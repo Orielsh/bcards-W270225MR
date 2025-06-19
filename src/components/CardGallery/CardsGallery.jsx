@@ -1,5 +1,7 @@
 import { useContext, useEffect, useState } from "react"
-import { MyContext } from "../App"
+import { MyContext } from "../../App"
+import Card from "../Card/Card";
+import "./CardGallery.css";
 
 export default function CardsGallery() {
 
@@ -23,12 +25,10 @@ export default function CardsGallery() {
     }, []);
 
     return (
-        <div>
+        <div className="CardGallery">
             {
                 cards.map((card) =>
-                    <div key={card._id}>
-                        {card._id}
-                    </div>
+                    <Card key={card._id} card={card}/>
                 )
             }
         </div>
