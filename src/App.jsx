@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router';
 import CardsGallery from './components/CardsGallery';
 import { useState, createContext } from "react";
+import Header from "./components/Header/Header";
 
 export const MyContext = createContext();
 
@@ -9,6 +10,7 @@ function App() {
   
   return (
     <MyContext.Provider value={{setIsLoader}}>
+      <Header/>
       <Routes>
         <Route path="/" element={<CardsGallery />} />
       </Routes>
